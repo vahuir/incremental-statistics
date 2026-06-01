@@ -6,6 +6,7 @@ It computes several statistical measures incrementally and without keeping the o
 
 The following metrics can be obtained from the observations:
   - `count`: number of samples
+  - `sum`: sum of the values
   - `mean`: average
   - `std`: standard deviation
   - `var`: variance
@@ -32,6 +33,7 @@ stats.add([2,5])
 stats.report(round_to=1, prefix="-")
 
 >>> - Number of samples: 3
+>>> - Sum: 7
 >>> - Mean: 2.7
 >>> - Standard deviation: 1.7
 >>> - Variance: 2.9
@@ -65,6 +67,7 @@ stats.update(stats_batch2)
 stats.report(round_to=1, prefix="-")
 
 >>> - Number of samples: 3
+>>> - Sum: 8
 >>> - Mean: 2.7
 >>> - Standard deviation: 1.7
 >>> - Variance: 2.9
