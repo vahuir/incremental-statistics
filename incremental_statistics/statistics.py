@@ -86,6 +86,17 @@ class Statistics:
         self.min = sys.maxsize
         self.max = 0
 
+    def sum(self) -> Optional[Number]:
+        """Sum of the distribution
+
+        Returns:
+            Optional[Number]: The sum. Returns None if there are no samples.
+        """
+        if self.count > 0:
+            return self.sum
+
+        return None
+
     def mean(self) -> Optional[Number]:
         """Average of the distribution
 
@@ -254,6 +265,7 @@ class Statistics:
         if self.count == 0:
             return {
                 "count": 0,
+                "sum": None,
                 "mean": None,
                 "std": None,
                 "var": None,
@@ -266,6 +278,7 @@ class Statistics:
 
         return {
             "count": self.count,
+            "sum": self.sum,
             "mean": self.mean(),
             "std": self.std(),
             "var": self.var(),
