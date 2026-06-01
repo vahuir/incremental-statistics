@@ -10,6 +10,7 @@ Number = Union[int, float]
 
 KEY_TO_NAME = {
     "count": "Number of samples:",
+    "sum": "Sum:",
     "mean": "Mean:",
     "std": "Standard deviation:",
     "var": "Variance:",
